@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Desafio_02;
 
 import java.util.ArrayList;
@@ -10,10 +6,22 @@ import java.util.List;
 
 /**
  *
- * @author user
+ * @author Jeferson Bonecher
  */
 public class Main {
 
+    /**
+     * metodo identifica se terá a quantidade de alunos necessario para o
+     * professor dar aula. foi transformado o vetor em uma lista fazendo um for
+     * each percorrer a lista a cada item da lista ele compara de é menor ou
+     * igual a zero ou maior que zero se for menor igual ele adiciona mais 1 na
+     * variavel aux se for maior pula para o proximo item da lista
+     *
+     * @param x representa a quantidade de alunos necesario para ter aula.
+     * @param tempoChegada representa o horario que os alunos chegaram na sala
+     * @return se a variavel aux for maior igual ao numero informa x retorna
+     * aula normal senão returna aula cancelada
+     */
     public static String aula(int x, int[] tempoChegada) {
         int aux = 0;
         List<Integer> listaChegada = new ArrayList<>();
@@ -24,9 +32,9 @@ public class Main {
 
         for (int i = 0; i < listaChegada.size(); i++) {
 
-          
-            if (tempoChegada[i] <= 0) {
+            if (listaChegada.get(i) <= 0) {
                 aux++;
+
             }
 
         }
